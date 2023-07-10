@@ -108,6 +108,7 @@ let coin3 = null
 let coin2: Sprite;
 let flower2: Sprite;
 scene.setBackgroundColor(9)
+tiles.setCurrentTilemap(tilemap`level1`)
 meow = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -127,7 +128,6 @@ meow = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(meow, 100, 0)
-tiles.setCurrentTilemap(tilemap`level1`)
 meow.ay = 200
 scene.cameraFollowSprite(meow)
 for (let value of tiles.getTilesByType(assets.tile`estrela`)) {
